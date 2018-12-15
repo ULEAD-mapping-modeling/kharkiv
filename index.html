@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/90kmareaoftheAmalgamatedRayons_0.js"></script>
+        <script src="data/60kmareaoftheAmalgamatedRayons_1.js"></script>
+        <script src="data/30kmareaoftheAmalgamatedRayons_2.js"></script>
+        <script src="data/AmalgamatedRayonsPROJECT_3.js"></script>
+        <script src="data/CenteroftheAmalgamatedRayonsPROJECT_4.js"></script>
+        <script src="data/90kmareaoftheHospitalDistrict_5.js"></script>
+        <script src="data/60kmareaoftheHospitalDistrict_6.js"></script>
+        <script src="data/30kmareaoftheHospitalDistrict_7.js"></script>
+        <script src="data/HospitalDistrictPROJECT_8.js"></script>
+        <script src="data/CenteroftheHospitalDistrictPROJECT_9.js"></script>
+        <script src="data/TerritoryofAmmalgamedCommunityPROJECT_10.js"></script>
+        <script src="data/Perspectiveplan_11.js"></script>
+        <script src="data/TerritoryofAmmalgamedCommunity_12.js"></script>
+        <script src="data/Localgovernmentboundary_13.js"></script>
+        <script src="data/Rayonboundary_14.js"></script>
+        <script src="data/Oblastboundary_15.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:12, minZoom:6
+        }).fitBounds([[48.5916706675,34.2033528608],[50.3834611578,38.7805863207]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 12
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        function pop_90kmareaoftheAmalgamatedRayons_0(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 90km (th. of p.)</th>\
+                        <td>' + (feature.properties['pop_90'] !== null ? Autolinker.link(String(feature.properties['pop_90'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_90kmareaoftheAmalgamatedRayons_0_0() {
+            return {
+                pane: 'pane_90kmareaoftheAmalgamatedRayons_0',
+                opacity: 1,
+                color: 'rgba(194,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(244,203,185,1.0)',
+            }
+        }
+        map.createPane('pane_90kmareaoftheAmalgamatedRayons_0');
+        map.getPane('pane_90kmareaoftheAmalgamatedRayons_0').style.zIndex = 400;
+        map.getPane('pane_90kmareaoftheAmalgamatedRayons_0').style['mix-blend-mode'] = 'normal';
+        var layer_90kmareaoftheAmalgamatedRayons_0 = new L.geoJson(json_90kmareaoftheAmalgamatedRayons_0, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_90kmareaoftheAmalgamatedRayons_0',
+            onEachFeature: pop_90kmareaoftheAmalgamatedRayons_0,
+            style: style_90kmareaoftheAmalgamatedRayons_0_0,
+        });
+        bounds_group.addLayer(layer_90kmareaoftheAmalgamatedRayons_0);
+        function pop_60kmareaoftheAmalgamatedRayons_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 60km (th. of p.)</th>\
+                        <td>' + (feature.properties['pop_60'] !== null ? Autolinker.link(String(feature.properties['pop_60'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_60kmareaoftheAmalgamatedRayons_1_0() {
+            return {
+                pane: 'pane_60kmareaoftheAmalgamatedRayons_1',
+                opacity: 1,
+                color: 'rgba(200,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(230,158,143,1.0)',
+            }
+        }
+        map.createPane('pane_60kmareaoftheAmalgamatedRayons_1');
+        map.getPane('pane_60kmareaoftheAmalgamatedRayons_1').style.zIndex = 401;
+        map.getPane('pane_60kmareaoftheAmalgamatedRayons_1').style['mix-blend-mode'] = 'normal';
+        var layer_60kmareaoftheAmalgamatedRayons_1 = new L.geoJson(json_60kmareaoftheAmalgamatedRayons_1, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_60kmareaoftheAmalgamatedRayons_1',
+            onEachFeature: pop_60kmareaoftheAmalgamatedRayons_1,
+            style: style_60kmareaoftheAmalgamatedRayons_1_0,
+        });
+        bounds_group.addLayer(layer_60kmareaoftheAmalgamatedRayons_1);
+        function pop_30kmareaoftheAmalgamatedRayons_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 30km (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_30'] !== null ? Autolinker.link(String(feature.properties['popul_30'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_30kmareaoftheAmalgamatedRayons_2_0() {
+            return {
+                pane: 'pane_30kmareaoftheAmalgamatedRayons_2',
+                opacity: 1,
+                color: 'rgba(210,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(220,108,107,1.0)',
+            }
+        }
+        map.createPane('pane_30kmareaoftheAmalgamatedRayons_2');
+        map.getPane('pane_30kmareaoftheAmalgamatedRayons_2').style.zIndex = 402;
+        map.getPane('pane_30kmareaoftheAmalgamatedRayons_2').style['mix-blend-mode'] = 'normal';
+        var layer_30kmareaoftheAmalgamatedRayons_2 = new L.geoJson(json_30kmareaoftheAmalgamatedRayons_2, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_30kmareaoftheAmalgamatedRayons_2',
+            onEachFeature: pop_30kmareaoftheAmalgamatedRayons_2,
+            style: style_30kmareaoftheAmalgamatedRayons_2_0,
+        });
+        bounds_group.addLayer(layer_30kmareaoftheAmalgamatedRayons_2);
+        function pop_AmalgamatedRayonsPROJECT_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NAME A.Rayon</th>\
+                        <td>' + (feature.properties['NAME_UA'] !== null ? Autolinker.link(String(feature.properties['NAME_UA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_ray'] !== null ? Autolinker.link(String(feature.properties['popul_ray'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_AmalgamatedRayonsPROJECT_3_0() {
+            return {
+                pane: 'pane_AmalgamatedRayonsPROJECT_3',
+                opacity: 1,
+                color: 'rgba(1,30,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_AmalgamatedRayonsPROJECT_3');
+        map.getPane('pane_AmalgamatedRayonsPROJECT_3').style.zIndex = 403;
+        map.getPane('pane_AmalgamatedRayonsPROJECT_3').style['mix-blend-mode'] = 'normal';
+        var layer_AmalgamatedRayonsPROJECT_3 = new L.geoJson(json_AmalgamatedRayonsPROJECT_3, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_AmalgamatedRayonsPROJECT_3',
+            onEachFeature: pop_AmalgamatedRayonsPROJECT_3,
+            style: style_AmalgamatedRayonsPROJECT_3_0,
+        });
+        bounds_group.addLayer(layer_AmalgamatedRayonsPROJECT_3);
+        function pop_CenteroftheAmalgamatedRayonsPROJECT_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CenteroftheAmalgamatedRayonsPROJECT_4_0() {
+            return {
+                pane: 'pane_CenteroftheAmalgamatedRayonsPROJECT_4',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(18,255,1,1.0)',
+            }
+        }
+        map.createPane('pane_CenteroftheAmalgamatedRayonsPROJECT_4');
+        map.getPane('pane_CenteroftheAmalgamatedRayonsPROJECT_4').style.zIndex = 404;
+        map.getPane('pane_CenteroftheAmalgamatedRayonsPROJECT_4').style['mix-blend-mode'] = 'normal';
+        var layer_CenteroftheAmalgamatedRayonsPROJECT_4 = new L.geoJson(json_CenteroftheAmalgamatedRayonsPROJECT_4, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_CenteroftheAmalgamatedRayonsPROJECT_4',
+            onEachFeature: pop_CenteroftheAmalgamatedRayonsPROJECT_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_CenteroftheAmalgamatedRayonsPROJECT_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_CenteroftheAmalgamatedRayonsPROJECT_4);
+        function pop_90kmareaoftheHospitalDistrict_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['NAME_UA'] !== null ? Autolinker.link(String(feature.properties['NAME_UA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 90km (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_90'] !== null ? Autolinker.link(String(feature.properties['popul_90'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_90kmareaoftheHospitalDistrict_5_0() {
+            return {
+                pane: 'pane_90kmareaoftheHospitalDistrict_5',
+                opacity: 1,
+                color: 'rgba(194,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(244,203,185,1.0)',
+            }
+        }
+        map.createPane('pane_90kmareaoftheHospitalDistrict_5');
+        map.getPane('pane_90kmareaoftheHospitalDistrict_5').style.zIndex = 405;
+        map.getPane('pane_90kmareaoftheHospitalDistrict_5').style['mix-blend-mode'] = 'normal';
+        var layer_90kmareaoftheHospitalDistrict_5 = new L.geoJson(json_90kmareaoftheHospitalDistrict_5, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_90kmareaoftheHospitalDistrict_5',
+            onEachFeature: pop_90kmareaoftheHospitalDistrict_5,
+            style: style_90kmareaoftheHospitalDistrict_5_0,
+        });
+        bounds_group.addLayer(layer_90kmareaoftheHospitalDistrict_5);
+        function pop_60kmareaoftheHospitalDistrict_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 60km (th. of p.)</th>\
+                        <td>' + (feature.properties['pop60'] !== null ? Autolinker.link(String(feature.properties['pop60'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_60kmareaoftheHospitalDistrict_6_0() {
+            return {
+                pane: 'pane_60kmareaoftheHospitalDistrict_6',
+                opacity: 1,
+                color: 'rgba(200,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(230,158,143,1.0)',
+            }
+        }
+        map.createPane('pane_60kmareaoftheHospitalDistrict_6');
+        map.getPane('pane_60kmareaoftheHospitalDistrict_6').style.zIndex = 406;
+        map.getPane('pane_60kmareaoftheHospitalDistrict_6').style['mix-blend-mode'] = 'normal';
+        var layer_60kmareaoftheHospitalDistrict_6 = new L.geoJson(json_60kmareaoftheHospitalDistrict_6, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_60kmareaoftheHospitalDistrict_6',
+            onEachFeature: pop_60kmareaoftheHospitalDistrict_6,
+            style: style_60kmareaoftheHospitalDistrict_6_0,
+        });
+        bounds_group.addLayer(layer_60kmareaoftheHospitalDistrict_6);
+        function pop_30kmareaoftheHospitalDistrict_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name centr</th>\
+                        <td>' + (feature.properties['NAME_UA'] !== null ? Autolinker.link(String(feature.properties['NAME_UA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population 30km (th. of p.)</th>\
+                        <td>' + (feature.properties['popula'] !== null ? Autolinker.link(String(feature.properties['popula'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_30kmareaoftheHospitalDistrict_7_0() {
+            return {
+                pane: 'pane_30kmareaoftheHospitalDistrict_7',
+                opacity: 1,
+                color: 'rgba(210,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.3,
+                fillColor: 'rgba(220,108,107,1.0)',
+            }
+        }
+        map.createPane('pane_30kmareaoftheHospitalDistrict_7');
+        map.getPane('pane_30kmareaoftheHospitalDistrict_7').style.zIndex = 407;
+        map.getPane('pane_30kmareaoftheHospitalDistrict_7').style['mix-blend-mode'] = 'normal';
+        var layer_30kmareaoftheHospitalDistrict_7 = new L.geoJson(json_30kmareaoftheHospitalDistrict_7, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_30kmareaoftheHospitalDistrict_7',
+            onEachFeature: pop_30kmareaoftheHospitalDistrict_7,
+            style: style_30kmareaoftheHospitalDistrict_7_0,
+        });
+        bounds_group.addLayer(layer_30kmareaoftheHospitalDistrict_7);
+        function pop_HospitalDistrictPROJECT_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NAME H.District</th>\
+                        <td>' + (feature.properties['NAME_UA'] !== null ? Autolinker.link(String(feature.properties['NAME_UA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_hosp'] !== null ? Autolinker.link(String(feature.properties['popul_hosp'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_HospitalDistrictPROJECT_8_0() {
+            return {
+                pane: 'pane_HospitalDistrictPROJECT_8',
+                opacity: 1,
+                color: 'rgba(1,30,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_HospitalDistrictPROJECT_8');
+        map.getPane('pane_HospitalDistrictPROJECT_8').style.zIndex = 408;
+        map.getPane('pane_HospitalDistrictPROJECT_8').style['mix-blend-mode'] = 'normal';
+        var layer_HospitalDistrictPROJECT_8 = new L.geoJson(json_HospitalDistrictPROJECT_8, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_HospitalDistrictPROJECT_8',
+            onEachFeature: pop_HospitalDistrictPROJECT_8,
+            style: style_HospitalDistrictPROJECT_8_0,
+        });
+        bounds_group.addLayer(layer_HospitalDistrictPROJECT_8);
+        function pop_CenteroftheHospitalDistrictPROJECT_9(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CenteroftheHospitalDistrictPROJECT_9_0() {
+            return {
+                pane: 'pane_CenteroftheHospitalDistrictPROJECT_9',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(18,255,1,1.0)',
+            }
+        }
+        map.createPane('pane_CenteroftheHospitalDistrictPROJECT_9');
+        map.getPane('pane_CenteroftheHospitalDistrictPROJECT_9').style.zIndex = 409;
+        map.getPane('pane_CenteroftheHospitalDistrictPROJECT_9').style['mix-blend-mode'] = 'normal';
+        var layer_CenteroftheHospitalDistrictPROJECT_9 = new L.geoJson(json_CenteroftheHospitalDistrictPROJECT_9, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_CenteroftheHospitalDistrictPROJECT_9',
+            onEachFeature: pop_CenteroftheHospitalDistrictPROJECT_9,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_CenteroftheHospitalDistrictPROJECT_9_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_CenteroftheHospitalDistrictPROJECT_9);
+        function pop_TerritoryofAmmalgamedCommunityPROJECT_10(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name OTG</th>\
+                        <td>' + (feature.properties['_name_otg'] !== null ? Autolinker.link(String(feature.properties['_name_otg'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Area (sq.km)</th>\
+                        <td>' + (feature.properties['area_pp'] !== null ? Autolinker.link(String(feature.properties['area_pp'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_pp'] !== null ? Autolinker.link(String(feature.properties['popul_pp'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Number units</th>\
+                        <td>' + (feature.properties['num_un'] !== null ? Autolinker.link(String(feature.properties['num_un'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Reiting</th>\
+                        <td>' + (feature.properties['reiting'] !== null ? Autolinker.link(String(feature.properties['reiting'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_TerritoryofAmmalgamedCommunityPROJECT_10_0() {
+            return {
+                pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_10',
+                opacity: 1,
+                color: 'rgba(74,68,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 0.4,
+                fillColor: 'rgba(123,255,156,0.352941176471)',
+            }
+        }
+        map.createPane('pane_TerritoryofAmmalgamedCommunityPROJECT_10');
+        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_10').style.zIndex = 410;
+        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_10').style['mix-blend-mode'] = 'normal';
+        var layer_TerritoryofAmmalgamedCommunityPROJECT_10 = new L.geoJson(json_TerritoryofAmmalgamedCommunityPROJECT_10, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_10',
+            onEachFeature: pop_TerritoryofAmmalgamedCommunityPROJECT_10,
+            style: style_TerritoryofAmmalgamedCommunityPROJECT_10_0,
+        });
+        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunityPROJECT_10);
+        function pop_Perspectiveplan_11(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name</th>\
+                        <td>' + (feature.properties['name'] !== null ? Autolinker.link(String(feature.properties['name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Area (sq.km)</th>\
+                        <td>' + (feature.properties['area_pp'] !== null ? Autolinker.link(String(feature.properties['area_pp'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul'] !== null ? Autolinker.link(String(feature.properties['popul'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Perspectiveplan_11_0() {
+            return {
+                pane: 'pane_Perspectiveplan_11',
+                opacity: 1,
+                color: 'rgba(74,68,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 0.4,
+                fillColor: 'rgba(255,246,159,0.352941176471)',
+            }
+        }
+        map.createPane('pane_Perspectiveplan_11');
+        map.getPane('pane_Perspectiveplan_11').style.zIndex = 411;
+        map.getPane('pane_Perspectiveplan_11').style['mix-blend-mode'] = 'normal';
+        var layer_Perspectiveplan_11 = new L.geoJson(json_Perspectiveplan_11, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_Perspectiveplan_11',
+            onEachFeature: pop_Perspectiveplan_11,
+            style: style_Perspectiveplan_11_0,
+        });
+        bounds_group.addLayer(layer_Perspectiveplan_11);
+        function pop_TerritoryofAmmalgamedCommunity_12(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Name OTG</th>\
+                        <td>' + (feature.properties['_NAME_UA'] !== null ? Autolinker.link(String(feature.properties['_NAME_UA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Number units</th>\
+                        <td>' + (feature.properties['nam_units'] !== null ? Autolinker.link(String(feature.properties['nam_units'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Area (sq.km)</th>\
+                        <td>' + (feature.properties['area_otg'] !== null ? Autolinker.link(String(feature.properties['area_otg'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_otg'] !== null ? Autolinker.link(String(feature.properties['popul_otg'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_TerritoryofAmmalgamedCommunity_12_0() {
+            return {
+                pane: 'pane_TerritoryofAmmalgamedCommunity_12',
+                opacity: 1,
+                color: 'rgba(37,98,188,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.4,
+                fillColor: 'rgba(115,161,230,0.529411764706)',
+            }
+        }
+        map.createPane('pane_TerritoryofAmmalgamedCommunity_12');
+        map.getPane('pane_TerritoryofAmmalgamedCommunity_12').style.zIndex = 412;
+        map.getPane('pane_TerritoryofAmmalgamedCommunity_12').style['mix-blend-mode'] = 'normal';
+        var layer_TerritoryofAmmalgamedCommunity_12 = new L.geoJson(json_TerritoryofAmmalgamedCommunity_12, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_TerritoryofAmmalgamedCommunity_12',
+            onEachFeature: pop_TerritoryofAmmalgamedCommunity_12,
+            style: style_TerritoryofAmmalgamedCommunity_12_0,
+        });
+        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunity_12);
+        function pop_Localgovernmentboundary_13(feature, layer) {
+        }
+
+        function style_Localgovernmentboundary_13_0() {
+            return {
+                pane: 'pane_Localgovernmentboundary_13',
+                opacity: 1,
+                color: 'rgba(228,192,216,0.752941176471)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_Localgovernmentboundary_13');
+        map.getPane('pane_Localgovernmentboundary_13').style.zIndex = 413;
+        map.getPane('pane_Localgovernmentboundary_13').style['mix-blend-mode'] = 'normal';
+        var layer_Localgovernmentboundary_13 = new L.geoJson(json_Localgovernmentboundary_13, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_Localgovernmentboundary_13',
+            onEachFeature: pop_Localgovernmentboundary_13,
+            style: style_Localgovernmentboundary_13_0,
+        });
+        bounds_group.addLayer(layer_Localgovernmentboundary_13);
+        function pop_Rayonboundary_14(feature, layer) {
+        }
+
+        function style_Rayonboundary_14_0() {
+            return {
+                pane: 'pane_Rayonboundary_14',
+                opacity: 1,
+                color: 'rgba(143,42,66,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_Rayonboundary_14');
+        map.getPane('pane_Rayonboundary_14').style.zIndex = 414;
+        map.getPane('pane_Rayonboundary_14').style['mix-blend-mode'] = 'normal';
+        var layer_Rayonboundary_14 = new L.geoJson(json_Rayonboundary_14, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_Rayonboundary_14',
+            onEachFeature: pop_Rayonboundary_14,
+            style: style_Rayonboundary_14_0,
+        });
+        bounds_group.addLayer(layer_Rayonboundary_14);
+        function pop_Oblastboundary_15(feature, layer) {
+        }
+
+        function style_Oblastboundary_15_0() {
+            return {
+                pane: 'pane_Oblastboundary_15',
+                opacity: 1,
+                color: 'rgba(227,106,101,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_Oblastboundary_15');
+        map.getPane('pane_Oblastboundary_15').style.zIndex = 415;
+        map.getPane('pane_Oblastboundary_15').style['mix-blend-mode'] = 'normal';
+        var layer_Oblastboundary_15 = new L.geoJson(json_Oblastboundary_15, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_Oblastboundary_15',
+            onEachFeature: pop_Oblastboundary_15,
+            style: style_Oblastboundary_15_0,
+        });
+        bounds_group.addLayer(layer_Oblastboundary_15);
+        map.addLayer(layer_Oblastboundary_15);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/Oblastboundary_15.png" /> Oblast boundary': layer_Oblastboundary_15,'<img src="legend/Rayonboundary_14.png" /> Rayon boundary': layer_Rayonboundary_14,'<img src="legend/Localgovernmentboundary_13.png" /> Local government boundary': layer_Localgovernmentboundary_13,'<img src="legend/TerritoryofAmmalgamedCommunity_12.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_12,'<img src="legend/Perspectiveplan_11.png" /> Perspective plan': layer_Perspectiveplan_11,'<img src="legend/TerritoryofAmmalgamedCommunityPROJECT_10.png" /> Territory of Ammalgamed Community (PROJECT)': layer_TerritoryofAmmalgamedCommunityPROJECT_10,'<img src="legend/CenteroftheHospitalDistrictPROJECT_9.png" /> Center of the Hospital District (PROJECT)': layer_CenteroftheHospitalDistrictPROJECT_9,'<img src="legend/HospitalDistrictPROJECT_8.png" /> Hospital District (PROJECT)': layer_HospitalDistrictPROJECT_8,'<img src="legend/30kmareaoftheHospitalDistrict_7.png" /> 30 km area of the Hospital District': layer_30kmareaoftheHospitalDistrict_7,'<img src="legend/60kmareaoftheHospitalDistrict_6.png" /> 60 km area of the Hospital District': layer_60kmareaoftheHospitalDistrict_6,'<img src="legend/90kmareaoftheHospitalDistrict_5.png" /> 90 km area of the Hospital District': layer_90kmareaoftheHospitalDistrict_5,'<img src="legend/CenteroftheAmalgamatedRayonsPROJECT_4.png" /> Center of the Amalgamated Rayons (PROJECT)': layer_CenteroftheAmalgamatedRayonsPROJECT_4,'<img src="legend/AmalgamatedRayonsPROJECT_3.png" /> Amalgamated Rayons (PROJECT)': layer_AmalgamatedRayonsPROJECT_3,'<img src="legend/30kmareaoftheAmalgamatedRayons_2.png" /> 30 km area of the Amalgamated Rayons': layer_30kmareaoftheAmalgamatedRayons_2,'<img src="legend/60kmareaoftheAmalgamatedRayons_1.png" /> 60 km area of the Amalgamated Rayons': layer_60kmareaoftheAmalgamatedRayons_1,'<img src="legend/90kmareaoftheAmalgamatedRayons_0.png" /> 90 km area of the Amalgamated Rayons': layer_90kmareaoftheAmalgamatedRayons_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
