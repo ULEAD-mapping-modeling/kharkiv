@@ -78,6 +78,14 @@
         function setBounds() {
         }
         function pop_90kmareaoftheAmalgamatedRayons_0(feature, layer) {
+		    layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name</th>\
@@ -116,6 +124,14 @@
         });
         bounds_group.addLayer(layer_90kmareaoftheAmalgamatedRayons_0);
         function pop_60kmareaoftheAmalgamatedRayons_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name</th>\
@@ -154,6 +170,14 @@
         });
         bounds_group.addLayer(layer_60kmareaoftheAmalgamatedRayons_1);
         function pop_30kmareaoftheAmalgamatedRayons_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name centr</th>\
@@ -192,6 +216,14 @@
         });
         bounds_group.addLayer(layer_30kmareaoftheAmalgamatedRayons_2);
         function pop_AmalgamatedRayonsPROJECT_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">NAME A.Rayon</th>\
@@ -228,6 +260,14 @@
         });
         bounds_group.addLayer(layer_AmalgamatedRayonsPROJECT_3);
         function pop_CenteroftheAmalgamatedRayonsPROJECT_4(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
@@ -268,6 +308,14 @@
         });
         bounds_group.addLayer(layer_CenteroftheAmalgamatedRayonsPROJECT_4);
         function pop_ODAARPROJECT_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name ODA AR</th>\
@@ -308,6 +356,14 @@
         });
         bounds_group.addLayer(layer_ODAARPROJECT_5);
         function pop_CenteroftheODAARPROJECT_6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['nameUA_old'] !== null ? Autolinker.link(String(feature.properties['nameUA_old'])) : '') + '</td>\
@@ -348,6 +404,14 @@
         });
         bounds_group.addLayer(layer_CenteroftheODAARPROJECT_6);
         function pop_90kmareaoftheHospitalDistrict_7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name centr</th>\
@@ -386,6 +450,14 @@
         });
         bounds_group.addLayer(layer_90kmareaoftheHospitalDistrict_7);
         function pop_60kmareaoftheHospitalDistrict_8(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name centr</th>\
@@ -424,6 +496,14 @@
         });
         bounds_group.addLayer(layer_60kmareaoftheHospitalDistrict_8);
         function pop_30kmareaoftheHospitalDistrict_9(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name centr</th>\
@@ -462,6 +542,14 @@
         });
         bounds_group.addLayer(layer_30kmareaoftheHospitalDistrict_9);
         function pop_HospitalDistrictPROJECT_10(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">NAME H.District</th>\
@@ -498,6 +586,14 @@
         });
         bounds_group.addLayer(layer_HospitalDistrictPROJECT_10);
         function pop_CenteroftheHospitalDistrictPROJECT_11(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
@@ -538,6 +634,14 @@
         });
         bounds_group.addLayer(layer_CenteroftheHospitalDistrictPROJECT_11);
         function pop_TerritoryofAmmalgamedCommunityPROJECT_12(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name OTG</th>\
@@ -588,6 +692,14 @@
         });
         bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunityPROJECT_12);
         function pop_Perspectiveplan_13(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name PP</th>\
@@ -630,6 +742,14 @@
         });
         bounds_group.addLayer(layer_Perspectiveplan_13);
         function pop_TerritoryofAmmalgamedCommunity_14(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Name OTG</th>\
@@ -676,6 +796,14 @@
         });
         bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunity_14);
         function pop_Localgovernmentboundary_15(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
         }
 
         function style_Localgovernmentboundary_15_0() {
@@ -701,6 +829,14 @@
         });
         bounds_group.addLayer(layer_Localgovernmentboundary_15);
         function pop_Rayonboundary_16(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
         }
 
         function style_Rayonboundary_16_0() {
@@ -726,6 +862,14 @@
         });
         bounds_group.addLayer(layer_Rayonboundary_16);
         function pop_Oblastboundary_17(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
         }
 
         function style_Oblastboundary_17_0() {
