@@ -49,6 +49,21 @@
         <script src="data/Rayonboundary_16.js"></script>
         <script src="data/Oblastboundary_17.js"></script>
         <script>
+		        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 0.6
+              });
+            }
+        }
         var map = L.map('map', {
             zoomControl:true, maxZoom:12, minZoom:6
         }).fitBounds([[47.5752307813,32.4441939129],[51.0982328832,41.8653401788]]);
