@@ -139,11 +139,11 @@
         function pop_30kmareaoftheAmalgamatedRayons_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Name centr</th>\
+                        <th scope="row">Name_centr</th>\
                         <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Population 30km (th. of p.)</th>\
+                        <th scope="row">Population (30km (th. of p.))</th>\
                         <td>' + (feature.properties['popul_30'] !== null ? Autolinker.link(String(feature.properties['popul_30'])) : '') + '</td>\
                     </tr>\
                 </table>';
