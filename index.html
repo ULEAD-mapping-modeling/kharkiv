@@ -60,7 +60,7 @@
             } else {
               highlightLayer.setStyle({
                 fillColor: '#ffff00',
-                fillOpacity: 0.6
+                fillOpacity: 0.5
               });
             }
         }
@@ -92,7 +92,7 @@
                         <td>' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">pop_90</th>\
+                        <th scope="row">Population 90km (th. of p.)</th>\
                         <td>' + (feature.properties['pop_90'] !== null ? Autolinker.link(String(feature.properties['pop_90'])) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -245,7 +245,7 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 2.0,
+                weight: 5.0,
                 fillOpacity: 0,
             }
         }
@@ -268,9 +268,22 @@
                 },
                 mouseover: highlightFeature,
             });
-            var popupContent = '<table>\
+             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
+                        <th scope="row">NAME A.Rayon</th>\
+                        <td>' + (feature.properties['nameUA_new'] !== null ? Autolinker.link(String(feature.properties['nameUA_new'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">OTG in rayon</th>\
+                        <td>' + (feature.properties['otg_in_atu'] !== null ? Autolinker.link(String(feature.properties['otg_in_atu'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Area (sq.km)</th>\
+                        <td>' + (feature.properties['area_atu'] !== null ? Autolinker.link(String(feature.properties['area_atu'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul'] !== null ? Autolinker.link(String(feature.properties['popul'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -366,7 +379,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['nameUA_old'] !== null ? Autolinker.link(String(feature.properties['nameUA_old'])) : '') + '</td>\
+                        <th scope="row">Name ODA AR</th>\
+                        <td>' + (feature.properties['nameUA_old'] !== null ? Autolinker.link(String(feature.properties['nameUA_old'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">OTG in rayon</th>\
+                        <td>' + (feature.properties['otg_in_rai'] !== null ? Autolinker.link(String(feature.properties['otg_in_rai'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">aArea (sq.km)</th>\
+                        <td>' + (feature.properties['area_rai'] !== null ? Autolinker.link(String(feature.properties['area_rai'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Population (th. of p.)</th>\
+                        <td>' + (feature.properties['popul_rai'] !== null ? Autolinker.link(String(feature.properties['popul_rai'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -880,7 +906,7 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 2.0,
+                weight: 5.0,
                 fillOpacity: 0,
             }
         }
