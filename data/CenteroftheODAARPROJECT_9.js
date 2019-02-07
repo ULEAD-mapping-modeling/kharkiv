@@ -1,6 +1,6 @@
-var json_CenteroftheODAARPROJECT_6 = {
+var json_CenteroftheODAARPROJECT_9 = {
 "type": "FeatureCollection",
-"name": "CenteroftheODAARPROJECT_6",
+"name": "CenteroftheODAARPROJECT_9",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "nameUA_old": "Лозівський", "otg_in_rai": "5", "area_rai": "4167 (13.2%)", "popul_rai": "131.5 (4.9%)" }, "geometry": { "type": "Point", "coordinates": [ 36.314474680322554, 48.886372910611875 ] } },
